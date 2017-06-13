@@ -1,3 +1,5 @@
+
+
 sbtPlugin := true
 
 name := "findbugs4sbt"
@@ -9,7 +11,10 @@ version := "1.4.0"
 scalaVersion := "2.10.3"
 
 resolvers += "Sonatype Release" at "https://oss.sonatype.org/content/repositories/releases"
+import de.johoop.findbugs4sbt.FindBugs._
 
+findbugsSettings
+addSbtPlugin("de.johoop" % "findbugs4sbt" % "1.4.0")
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-language:_")
 // add dependencies on standard Scala modules, in a way
 // supporting cross-version publishing
